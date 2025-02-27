@@ -1,8 +1,11 @@
-body {
-  font-size: 20px; /* Ajuste o valor conforme necessário */
+body,
+html {
+  font-size: 20px;
   margin: 0;
   padding: 0;
-  background-color: #e0e0e0; /* Fundo levemente acinzentado */
+  background-color: #e0e0e0;
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+  height: 100vh; /* Garante que o body ocupe toda a altura */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,58 +19,25 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
+  background: white; /* Garante visibilidade da barra */
 }
 
 .container {
-  margin-top: 160px; /* Ajuste para não sobrepor a barra de menu */
-  width: 85%; /* Ajusta a largura do container */
+  margin-top: 150px; /* Ajustado para evitar sobreposição com a barra de menu */
+  width: 85%;
   max-width: 1000px;
-  background-color: white; /* Cor de fundo do container */
+  background-color: white;
   padding: 30px;
-  border-radius: 25px; /* Bordas arredondadas */
-  box-shadow: 0px 10px 20px rgba(3, 3, 159, 0.3); /* Sombra azul mais sutil e difusa */
-  position: relative;
-}
-
-.container::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(
-    circle at top left,
-    rgba(0, 0, 255, 0.1),
-    transparent
-  );
-  z-index: -1;
-}
-
-.main-content {
+  border-radius: 25px;
+  box-shadow: 0px 10px 20px rgba(3, 3, 159, 0.3);
   display: flex;
-  flex-direction: column; /* Coloca imagem e texto em coluna */
-  align-items: flex-start; /* Alinha à esquerda */
-  padding-left: 4px; /* Ajuste de espaço entre a imagem e a borda */
-}
-
-.main-image {
-  width: 17%; /* Ajuste no tamanho da imagem */
-  max-width: 380px; /* Define um tamanho máximo */
-  height: auto;
-  border-radius: 15px; /* Bordas mais suaves */
-  box-shadow: 0px 6px 12px rgba(15, 13, 155, 0.2); /* Sombra mais realista */
-  margin-bottom: 20px; /* Espaço entre a imagem e o texto */
-}
-
-.text-content {
-  color: #333; /* Cor do texto */
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo dentro da container */
 }
 
 .text-content h1 {
-  font-size: 40px; /* Ajuste o valor conforme necessário */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 40px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
